@@ -1,0 +1,4 @@
+version: '2'
+services:
+  app:
+    entrypoint: ./bin/wait_for_pg.sh db
