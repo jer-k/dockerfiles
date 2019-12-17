@@ -18,7 +18,4 @@ RUN --mount=type=secret,id=aws,target=/root/.aws/credentials \
 
 FROM mysql:${MYSQL_VERSION}
 
-# TODO source this
-ENV MYSQL_ROOT_PASSWORD=supersecret
-
 COPY --from=builder db-data.sql /docker-entrypoint-initdb.d/
